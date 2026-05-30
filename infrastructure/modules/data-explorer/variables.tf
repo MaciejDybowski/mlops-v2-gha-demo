@@ -40,6 +40,7 @@ variable "enable_monitoring" {
 }
 
 variable "client_secret" {
+  type        = string
   description = "client secret"
-  default     = false
+  default     = ""
 }
