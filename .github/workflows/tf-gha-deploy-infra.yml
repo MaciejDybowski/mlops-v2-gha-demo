@@ -2,6 +2,9 @@ name: tf-gha-deploy-infra.yml
  
 on: 
   workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
 env:
     config_env: 'none'
 jobs:
@@ -32,7 +35,6 @@ jobs:
       terraform_plan_vnet: "TBD" # TBD
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-      AZURE_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
       AZURE_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
       AZURE_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   deploy-azureml-resources:
