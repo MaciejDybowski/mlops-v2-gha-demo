@@ -1,12 +1,7 @@
 name: tf-gha-deploy-infra.yml
-
-on:
-  workflow_dispatch:
-
-permissions:
-  id-token: write
-  contents: read
  
+on: 
+  workflow_dispatch:
 env:
     config_env: 'none'
 jobs:
