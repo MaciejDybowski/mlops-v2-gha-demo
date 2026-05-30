@@ -27,13 +27,5 @@ variable "enable_monitoring" {
 }
 
 variable "client_secret" {
-  type        = string
   description = "Service Principal Secret"
-  default     = ""
-}
-
-variable "github_actions_service_principal_id" {
-  type        = string
-  description = "Service principal object ID used by GitHub Actions"
-  default     = ""
 }
